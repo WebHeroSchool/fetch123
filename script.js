@@ -11,23 +11,25 @@ fetch(user)
     
     const avatar = new Image();
         avatar.src = json.avatar_url;
+        avatar.className="avatar";
         body.append(avatar);
     
     const name = document.createElement("p");
         if (json.name === null) {
-            name.innerHTMl = "Информация о пользователе не доступна";
+            name.innerText = "Информация о пользователе не доступна";
         }
         else {
-             name.innerHTMl = json.name;
+             name.innerText = json.name;
     }
     body.append(name);
+    name.addEventListener("click", () => window.location=json.html_url);
     
     const bio = document.createElement("p");
         if (json.bio != null) {
-            bio.innerHTMl = json.bio;
+            bio.innerText = json.bio;
         }
         else {
-        bio.innerHTMl = "Информация о пользователе не доступна";
+        bio.innerText = "Информация о пользователе не доступна";
     }
     body.append(bio);
     
