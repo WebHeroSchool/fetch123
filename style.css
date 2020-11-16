@@ -1,0 +1,14 @@
+.avatar{
+  size: 150px;
+  height:150px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+p{
+  margin-left: 5px;
+  color: coral;
+}
+.errr{
+  color:red;
+  margin-left: 5px;
+}
